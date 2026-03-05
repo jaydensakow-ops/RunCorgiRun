@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc83508c75a84d298c950d35ce5b644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeyboardInput
+  corgi: {fileID: 737711919}
 --- !u!4 &225458237
 Transform:
   m_ObjectHideFlags: 0

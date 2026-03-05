@@ -3,30 +3,30 @@ using UnityEngine.InputSystem;
 
 public class KeyboardInput : MonoBehaviour
 {
-    public Corgi Corgi;
+    public Corgi corgi;
 
     void Update()
     {
         Keyboard keyboard = Keyboard.current;
 
-        if (keyboard.wKey.isPressedThisFrame)
+        if (keyboard.wKey.isPressed)
         {
-            Corgi.Move(Vector2.up);
+            corgi.Move(Vector2.up);
         }
         
-        if (keyboard.sKey.isPressedThisFrame)
+        if (keyboard.sKey.isPressed)
         {
-            Corgi.Move(Vector2.down);
+            corgi.Move(Vector2.down);
         }
 
-        if (keyboard.aKey.isPressedThisFrame)
+        if (keyboard.aKey.isPressed)
         {
-            Corgi.Move(Vector2.left);
+            corgi.Move(Vector2.left);
         }
 
-        if (keyboard.dKey.isPressedThisFrame)
+        if (keyboard.dKey.isPressed)
         {
-            Corgi.Move(Vector2.right);
+            corgi.Move(Vector2.right);
         }
     }
 }

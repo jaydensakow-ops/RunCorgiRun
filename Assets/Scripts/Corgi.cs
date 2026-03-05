@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Corgi : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
 
@@ -22,11 +22,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (direction.x > 0)
         {
-            
+            spriteRenderer.flipX = false;
         }
         else if (direction.x < 0)
         {
-            
+            spriteRenderer.flipX = true;
         }
     }
 }
