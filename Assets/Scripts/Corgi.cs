@@ -16,6 +16,7 @@ public class Corgi : MonoBehaviour
         
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y,0);
         
+        spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
     }
 
     private void FaceCorrectDirection(Vector2 direction)
@@ -28,5 +29,10 @@ public class Corgi : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+    }
+    
+    public Vector3 GetPosition()
+    {
+        return spriteRenderer.transform.position;
     }
 }
