@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae54ef53d73b4a5187f563f9bb21902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  DrunkSprite: {fileID: 0}
+  SoberSprite: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae54ef53d73b4a5187f563f9bb21902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  DrunkSprite: {fileID: 7035370694164157873, guid: 3503fed39c0804f8685efe98fe95af4f, type: 3}
+  SoberSprite: {fileID: 21300000, guid: a6dd5dfbd64f441b9b288e36afba4e1b, type: 3}
 --- !u!212 &737711920
 SpriteRenderer:
   m_ObjectHideFlags: 0

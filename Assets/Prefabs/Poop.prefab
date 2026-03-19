@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1904a0516f86943ebae4d026c1b745d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Poop
+  secondsOnScreen: 1
 --- !u!212 &-8743481331807772461
 SpriteRenderer:
   m_ObjectHideFlags: 0
