@@ -19,7 +19,7 @@ public class GameParameters : MonoBehaviour
     public static float PillMinimumSecondsToWait = 4f;
     public static float PillMaximumSecondsToWait = 6f;
     
-    public static float MoonshineSecondsOnScreen = 1f;
+    public static float MoonshineSecondsOnScreen = 5f;
     public static float MoonshineMinimumSecondsToWait = 5f;
     public static float MoonshineMaximumSecondsToWait = 6f;
 }

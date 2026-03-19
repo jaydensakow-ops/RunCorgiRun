@@ -30,8 +30,9 @@ public class TimedObjectPlacer : MonoBehaviour
         isOkToCreateBeer = true;
     }
 
-    private void Place()
+    public virtual void Place()
     {
         Instantiate(Prefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
     }
+    
 }
