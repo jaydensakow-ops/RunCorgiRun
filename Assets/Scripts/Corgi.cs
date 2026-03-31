@@ -6,11 +6,14 @@ public class Corgi : MonoBehaviour
 {
     public Sprite DrunkSprite;
     public Sprite SoberSprite;
+    public UI Ui;
     
     private SpriteRenderer corgiSpriteRenderer;
     private bool isDrunk = false;
     private bool isPlastered = false;
     private Coroutine soberUpCoroutine;
+    private int randomMoveCounter = 0;
+    private int lastRandomDirection = 0;
 
     public void Awake()
     {
@@ -27,7 +30,15 @@ public class Corgi : MonoBehaviour
 
     private void MoveRandomly()
     {
-        int direction = Random.Range(0, 4);
+        int direction = lastRandomDirection;
+        
+        if (randomMoveCounter == 0)
+        {
+            direction = Random.Range(0, 4);
+            lastRandomDirection = direction;
+            randomMoveCounter = Random.Range(20, 60);
+        }
+        
         switch (direction)
         {
             case 0:
@@ -42,7 +53,18 @@ public class Corgi : MonoBehaviour
             case 3:
                 Move(new Vector2(0, -1));
                 break;
+
+                randomMoveCounter = randomMoveCounter - 1;
         }
+    }
+
+    public void MoveManually(Vector2 direction)
+    {
+        if (isPlastered)
+        {
+            Move(direction);
+        }
+        
     }
 
     public void Move(Vector2 direction)
@@ -77,11 +99,14 @@ public class Corgi : MonoBehaviour
         }
         else if (other.tag == "Bone")
         {
-            print("do bone things");
+            ScoreKeeper.AddPoint();
+            Ui.SetScoreText(ScoreKeeper.GetScore());
+            Destroy(other.gameObject);
         }
         else if (other.tag == "Pill")
         {
-            print("do pill things");
+            SoberUp();
+            Destroy(other.gameObject);
         }
     }
 
